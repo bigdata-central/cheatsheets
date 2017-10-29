@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# from https://docs.docker.com/engine/installation/linux/docker-ce/debian/
+ 
 apt-get -y install \
      apt-transport-https \
      ca-certificates \
@@ -16,6 +18,8 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable"
    
-  apt-get -y update && apt-get -y install docker-ce 
+  apt-get -y update && apt-get -y install docker-ce --allow-unauthenticated
+
+
   
   
